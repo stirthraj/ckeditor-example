@@ -5,6 +5,9 @@ import InlineEditor from '@ckeditor/ckeditor5-build-inline';
 
 export default function App() {
   const [value, setValue] = React.useState('<p>Welcome to CKEditor!</p>');
+  if (value === '') {
+    throw new Error('I crashed!');
+  }
 
   return (
     <div className='App'>
